@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h4 class="nav-content">И на Марсе будут яблони цвести!</h4>
+    {% if prof == 'инженер' %}
+        <div align="center">
+            <h2>Инженерные тренажеры</h2>
+            <img src="/static/img/ing.png">
+        </div>
+    {% elif prof == 'строитель' %}
+        <div align="center">
+            <h2>Научные симуляторы</h2>
+            <img src="/static/img/sci.png">
+        </div>
+    {% else %}
+        <p>Неверный параметр.</p>
+    {% endif %}
+{% endblock %}
